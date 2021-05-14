@@ -1,6 +1,6 @@
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* BODY */
 
@@ -15,12 +15,23 @@ ul{
     list-style: none;
 }
 
+h1, h2{
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+p, li{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
 /* HEADER */
 
 header{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 40px;
 }
 
 #logo{
@@ -33,29 +44,71 @@ nav ul{
     display: flex;
 }
 
-nav ul li{
-     padding: 0 35px 0 35px;
-     text-align: center;
-}
-
-nav ul li a{
+.nav__options{
     text-decoration: none;
     color: black;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
-nav ul li a:hover{
+.nav__options:hover{
     color: #0065FC;
     border-top: 2px solid #0065FC;
-    padding-top: 50px;   
-}
-
-.nav__options{
-    padding-right: 35px;
-    padding-left: 35px;
+    padding-top: 50px; 
+    font-weight: 600;  
 }
 
 #nav__subscribe{
    color: #0065FC;
    font-weight: bold;
-   margin-right: 35px;
+   margin-right: 30px;
+}
+
+/* MAIN */
+
+/* SEARCH */
+
+h1{
+    margin: 0;
+}
+
+h1 + p{
+    margin: 7px 0 23px 0;
+}
+
+#search{
+    display: flex;
+    margin-top: 23px;
+}
+
+#search__ico{
+    background-color: #F2F2F2;    
+    padding: 17px 19px;
+    border-radius: 20px 0 0 20px;
+    font-size: 18px;
+    color: black;
+}
+
+#search__txt{
+    border: 1px solid #F2F2F2;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding-left: 18px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+#search__txt:focus-visible{
+    outline: none;
+}
+
+#search__btn{
+    background-color: #0065FC;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0 18px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
 }
