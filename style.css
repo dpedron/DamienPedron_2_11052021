@@ -115,19 +115,20 @@ h1 + p{
 
 /* FILTERS */
 
- #filters{
+#filters{
      display: flex;
      padding: 0;
      margin: 0;
+     flex-wrap: wrap;
  }
 
- .filters__li{
+.filters__li{
      margin: 30px 15px 0 0;
      display: flex;
      height: 54px;
  }
 
- .filters__li a{
+.filters__li a{
      display: flex;
      text-decoration: none;
      color: black;
@@ -136,7 +137,7 @@ h1 + p{
      align-items: center;
  }
 
- .filters__li a i{
+.filters__li a i{
      width: 50px;
      height: 50px;
      background-color: #DEEBFF;
@@ -146,18 +147,18 @@ h1 + p{
      text-align: center;
     }
 
- .filters__li a h4{
+.filters__li a h4{
     padding-left: 13px;
     padding-right: 22px;
     margin: 0;
  }
 
- #filters-info{
+#filters-info{
      display: flex;
      align-items: center;
  }
 
- #filters-info i{
+#filters-info i{
      height: 24px;
      width: 24px;
      margin-right: 12px;
@@ -167,7 +168,84 @@ h1 + p{
      color: #0065FC;
  }
 
- /* RESULTS */
+/* RESULTS */
 
- 
-     
+#results{
+    display: flex;
+}
+
+/* SEARCH RESULTS */
+
+#results section{
+     background-color: #F2F2F2;
+     width: 880px;
+     height: fit-content;
+     margin-right: 20px;
+     border-radius: 20px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ #results section h2{
+     margin: 50px 0 0 40px;
+ }
+
+ #search-results{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 28px 40px 45px 40px;
+    justify-content: space-between;
+ }
+
+ .search-results-cards{
+    padding: 5px;
+    width: 246px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+   justify-content: flex-start;
+    margin-bottom: 30px;
+    box-shadow: -1px 1px 5px 1px rgba(131, 125, 125, 0.75);
+}
+
+.search-results-cards img{
+    width: 100%;
+    height: 136px;
+    border-radius: 20px 20px 0 0;
+}
+
+.search-results-cards h3{
+    margin: 10px 0 10px 15px;
+}
+
+.search-results-cards p{
+    margin: 0 0 0 15px;
+}
+
+.search-results-cards div{
+    margin: 10px 0 10px 15px;
+}
+
+.search-results-cards i{
+    color: #0065FC;
+}
+
+.search-results-cards span i{
+    color:#F2F2F2;
+}
+
+#results section h4{
+    margin: 0 0 50px 40px;
+}
+
+#popular-results{
+    background-color: #F2F2F2;
+    margin-left: 20px;
+    width: 31%;
+    height: auto;
+    border-radius: 30px;
+ }
+
+ /* POPULAR RESULTS */
