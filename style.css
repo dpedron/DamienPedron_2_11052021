@@ -42,6 +42,7 @@ header{
 
 nav ul{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .nav__options{
@@ -58,7 +59,7 @@ nav ul{
     font-weight: 600;  
 }
 
-#nav__subscribe{
+nav ul #nav__subscribe{
    color: #0065FC;
    font-weight: bold;
    margin-right: 30px;
@@ -95,7 +96,7 @@ h1 + p{
     font-size: 1.2rem;
     padding-left: 18px;
     font-family: 'Raleway', sans-serif;
-  }
+}
 
 #search__txt:focus-visible{
     outline: none;
@@ -120,43 +121,56 @@ h1 + p{
      padding: 0;
      margin: 0;
      flex-wrap: wrap;
- }
+}
 
 .filters__li{
      margin: 30px 15px 0 0;
      display: flex;
      height: 54px;
- }
+}
+
+.filters__li h4{
+    align-self: center;
+}
 
 .filters__li a{
      display: flex;
      text-decoration: none;
      color: black;
-     border: 2px solid #F2F2F2;
+     border-bottom: 2px solid #F2F2F2;
+     border-right: 2px solid #F2F2F2;
+     border-top: 2px solid #F2F2F2;
      border-radius: 30px;
      align-items: center;
- }
+}
 
-.filters__li a i{
+.filters__li a div{
+     display: flex;
      width: 50px;
      height: 50px;
-     background-color: #DEEBFF;
+     background-color:  #DEEBFF;
      border-radius: 50%;
+     justify-content: center;
+     align-items: center;
      color: #0065FC;
-     margin-left: -2px;      
-     text-align: center;
-    }
+
+}
+
+.filters__li a div i{
+    font-size: 1.2rem;
+}
 
 .filters__li a h4{
     padding-left: 13px;
     padding-right: 22px;
     margin: 0;
- }
+}
 
 #filters-info{
      display: flex;
      align-items: center;
- }
+     margin: 0;
+}
 
 #filters-info i{
      height: 24px;
@@ -166,54 +180,62 @@ h1 + p{
      border-radius: 50%;
      text-align: center;
      color: #0065FC;
- }
+}
 
 /* RESULTS */
 
 #results{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* SEARCH RESULTS */
 
 #results section{
      background-color: #F2F2F2;
-     width: 880px;
+     max-width: 880px;
      height: fit-content;
-     margin-right: 20px;
+     margin: 40px 40px 0 0;
      border-radius: 20px;
      display: flex;
      flex-direction: column;
- }
+}
 
- #results section h2{
-     margin: 50px 0 0 40px;
- }
+#results section h2{
+     margin: 45px 0 0 40px;
+}
 
- #search-results{
-    width: 800px;
+#search-results{
+    max-width: 800px;
     display: flex;
     flex-wrap: wrap;
-    margin: 28px 40px 45px 40px;
+    margin: 28px 40px 15px 40px;
     justify-content: space-between;
- }
+    object-fit: contain;
+}
 
- .search-results-cards{
+.search-results-cards{
     padding: 5px;
     width: 246px;
     background-color: white;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-   justify-content: flex-start;
+    justify-content: flex-start;
     margin-bottom: 30px;
     box-shadow: -1px 1px 5px 1px rgba(131, 125, 125, 0.75);
 }
 
+.search-results-cards:hover{
+    box-shadow: 5px 5px 5px 5px #0065fc62;
+}
+
 .search-results-cards img{
     width: 100%;
-    height: 136px;
+    height: 114px;
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
 }
 
 .search-results-cards h3{
@@ -237,15 +259,55 @@ h1 + p{
 }
 
 #results section h4{
-    margin: 0 0 50px 40px;
+    margin: 0 0 45px 40px;
 }
 
-#popular-results{
+ /* POPULAR RESULTS */
+
+ #popular-results{
     background-color: #F2F2F2;
     margin-left: 20px;
-    width: 31%;
+    width: 420px;
     height: auto;
     border-radius: 30px;
- }
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
 
- /* POPULAR RESULTS */
+#popular-results-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 45px 40px 28px 40px;
+}
+
+#popular-results-title h2{
+    margin: 0;
+}
+
+#popular-results-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+}
+
+.popular-results-cards{
+    padding: 5px;
+    width: 343px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: -1px 1px 5px 1px rgba(131, 125, 125, 0.75);
+    margin-bottom: 33px;
+}
+
+.popular-results-cards img{
+    width: 127px;
+    height: 134px;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
