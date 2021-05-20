@@ -23,28 +23,30 @@ a{
 
 header{
     max-width: 1440px;
-    margin: 50px
+    margin: 50px;
 }
 
 /* NAV */
 
+nav{
+    display: flex;
+    line-height: 16px;
+    padding: 0;
+    justify-content: space-between;
+}
+
 nav ul{
     display: flex;
-    flex-wrap: wrap;
-    line-height: 16px;
     align-items: center;
-    padding: 0;
-    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 #logo{
     width: 96.25px;
     height: 45px;
-    justify-self: start;
 }
 
 .nav__options{
-    text-decoration: none;
     color: black;
     padding-left: 35px;
     padding-right: 35px;
@@ -53,11 +55,11 @@ nav ul{
 .nav__options:hover{
     color: #0065FC;
     border-top: 3px solid #0065FC;
-    padding-top: 60px; 
+    padding-top: 62px; 
     font-weight: 600;  
 }
 
-nav ul #nav__subscribe{
+nav ul #nav__signup{
    color: #0065FC;
    font-weight: bold;
 }
@@ -198,13 +200,14 @@ h1 + p{
 /* SEARCH RESULTS */
 
 #results section{
-    background-color: #F2F2F2;
-    padding: 0 25px 0 40px;
-    border-radius: 20px;
     display: flex;
-    flex-direction: column;  
-    margin-top: 40px;
-    max-width: 800px;
+    flex-direction: column;
+    flex-basis: 400px;
+    flex-grow: 1;
+    margin: 40px 20px 0 0;
+    padding: 0 25px 0 40px;
+    background-color: #F2F2F2;
+    border-radius: 20px;  
 }
 
 #results section h2{
@@ -215,22 +218,23 @@ h1 + p{
 
 #search-results{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 15px;
-    justify-content: space-between;
     object-fit: contain;
 }
 
 .search-results-cards{
-    padding: 5px;
-    width: 235px;
-    height: 198px;
-    background-color: white;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex-basis: 235px;
+    flex-grow: 1;
+    height: 198px;
     margin: 0 15px 30px 0;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
     box-shadow:0 0 10px rgba(168, 162, 162, 0.75);
 }
 
@@ -247,9 +251,9 @@ h1 + p{
 }
 
 .search-results-cards h3{
+    margin: 10px 0 10px 15px;
     font-size: 16px;
     font-weight: 800;
-    margin: 10px 0 10px 15px;
 }
 
 .search-results-cards p{
@@ -259,8 +263,8 @@ h1 + p{
 }
 
 .search-results-cards div{
-    margin: 10px 0 0 15px;
-    display: flex;   
+    display: flex; 
+    margin: 10px 0 0 15px;  
 }
 
 .search-results-cards i{
@@ -281,15 +285,14 @@ h1 + p{
  /* POPULAR RESULTS */
 
  #popular-results{
-    background-color: #F2F2F2;
-    padding: 0 40px;
-    max-width: 420px;
-    height: auto;
-    border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    max-width: 420px;
     margin-top: 40px;
+    padding: 0 40px;
+    background-color: #F2F2F2;
+    border-radius: 30px;
 }
 
 #popular-results-title{
@@ -310,13 +313,16 @@ h1 + p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: space-between;
+    flex-wrap: wrap;
     width: 340px;
 }
 
 .popular-results-cards{
     padding: 5px;
     height: 144px;
+    min-width: 330px;
+    flex-basis: 144px;
+    flex-grow: 1;
     background-color: white;
     border-radius: 20px;
     display: flex;
@@ -332,7 +338,7 @@ h1 + p{
 
 .popular-results-cards img{
     width: 127px;
-    height: 144px;
+    height: 100%;
     border-radius: 20px 0 0 20px;
     object-fit: cover;
 }
@@ -352,6 +358,7 @@ h1 + p{
 .popular-results-cards div div{
     margin-left: 20px;
     display: flex;
+
 }
 
 .popular-results-cards i{
@@ -373,7 +380,7 @@ h1 + p{
 }
 
 #activities img{
-    width: 302px;
+    width: 100%;
     object-fit: cover;
     border-radius: 30px 30px 0 0;
     vertical-align: bottom;
@@ -401,11 +408,12 @@ h1 + p{
 }
 
 .activities-cards-block{
-    margin: 25px 0 20px 0;
+    margin: 25px 20px 20px 0;
+    flex-grow: 1;
+    flex-basis: 200px;
 }
 
 .activities-cards{
-    width: 302px;
     box-shadow: 0 0 10px rgba(168, 162, 162, 0.75);
     border-radius: 30px;
 }
@@ -477,6 +485,38 @@ footer div a{
 }
 /* MEDIA QUERIES */
 
+@media screen and (max-width : 1030px){
+
+}
+
+
+@media screen and (max-width : 1410px){
+    #results{
+        flex-direction: column-reverse;
+    }
+
+    #popular-results{
+        max-width: none;
+        margin-right: 20px;
+        padding-right: 25px;
+    }
+
+    #popular-results-list{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .popular-results-cards{
+        flex-basis: 200px;
+        flex-grow: 1;
+        margin-right: 20px;
+    }
+
+    #popular-results-title i{
+        margin-right: 15px;
+    }
+}
+
 /* PHONE */
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -486,17 +526,47 @@ footer div a{
 
 /* TABLET */
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-body{
-    max-width: 750px;
-}
+@media and screen (min-width: 768px) and (max-width: 1024px) {
 
-header, main + section{
-    margin: 40px;
 
-}
+  }
 
-#results{
-    margin: 0;
-}
-}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    
+  }

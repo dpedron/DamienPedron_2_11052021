@@ -12,11 +12,11 @@
 <!-- HEADER -->
     <header>
         <nav>
+            <img id="logo" src="images/logo/Reservia@3x.png" alt="Logo reservia">
             <ul>
-                <img id="logo" src="images/logo/Reservia@3x.png" alt="Logo reservia">
                 <li><a href="#results" class="nav__options">Hébergements</a></li>
                 <li><a href="#activities" class="nav__options">Activités</a></li>
-                <li><a href="#" class="nav__options" id="nav__subscribe">S'inscrire</a></li>
+                <li><a href="#" class="nav__options" id="nav__signup">S'inscrire</a></li>
             </ul>
         </nav>
     </header>
@@ -28,7 +28,7 @@
             <p>En plein centre ville ou en pleine nature</p>
             <div id="search">
                 <a href="#"><i id="search__ico" class="fas fa-map-marker-alt"></i></a>
-                <input type="text" id="search__txt" name="search--inputs--txt">
+                <input type="text" id="search__txt" value="Marseille, France" onFocus="this.value='';" name="search--inputs--txt">
                 <input type="button" id="search__btn" value="Rechercher">
             </div>
         <!-- FILTERS -->    
