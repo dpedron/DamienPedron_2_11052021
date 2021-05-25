@@ -33,12 +33,12 @@ nav{
     line-height: 16px;
     padding: 0;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 nav ul{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 #logo{
@@ -252,24 +252,24 @@ h1 + p{
 
 .search-results-cards h3{
     margin: 10px 0 10px 15px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 800;
 }
 
 .search-results-cards p{
-    margin: 0 0 0 15px;
-    font-size: 14px;
+    margin-left: 15px;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
 .search-results-cards div{
     display: flex; 
-    margin: 10px 0 0 15px;  
+    margin: 10px 0 10px 15px;  
 }
 
 .search-results-cards i{
     color: #0065FC;
-    font-size: 12px;
+    font-size: 0.8rem;
 }
 
 .search-results-cards span i{
@@ -311,9 +311,8 @@ h1 + p{
 
 #popular-results-list{
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
-    flex-wrap: wrap;
     width: 340px;
 }
 
@@ -337,7 +336,8 @@ h1 + p{
 }
 
 .popular-results-cards img{
-    width: 127px;
+    min-width: 127px;
+    width: 29%;
     height: 100%;
     border-radius: 20px 0 0 20px;
     object-fit: cover;
@@ -393,10 +393,10 @@ h1 + p{
 }
 
 #activities h3{
-    padding-left: 20px;
+    padding: 20px;
     font-size: 0.9rem;
     font-weight: 800;
-    margin: 20px 0;
+    margin: 0;
 }
 
 #activities-list{
@@ -404,7 +404,6 @@ h1 + p{
     flex-flow: row wrap;
     justify-content: space-between;
     width: 100%;
-    height: fit-content;
 }
 
 .activities-cards-block{
@@ -485,11 +484,6 @@ footer div a{
 }
 /* MEDIA QUERIES */
 
-@media screen and (max-width : 1030px){
-
-}
-
-
 @media screen and (max-width : 1410px){
     #results{
         flex-direction: column-reverse;
@@ -517,56 +511,46 @@ footer div a{
     }
 }
 
-/* PHONE */
+@media only screen and (max-width: 1024px) {
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #search-results{
+        padding-right: 30px;
+    }
+
+    .search-results-cards{
+        min-width: 100%;
+        height: 100%;
+    }
+
+    .search-results-cards img{
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .popular-results-cards{
+        height: 200px;
+    }
+
+    .popular-results-cards img{
+        min-width: 50%;
+    }
+
+    #activities-list{
+        flex-direction: column;
+    }
+
+    .activities-cards-block div img{
+        height: 180px;
+    }
+
+    .activities-cards{
+        height: 100%;
+    }
 
 }
 
+/* PHONE */
 
-/* TABLET */
+@media only screen and (max-device-width : 480px) {
 
-@media and screen (min-width: 768px) and (max-width: 1024px) {
-
-
-  }
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-  
-    /* CSS */
-    
-  }
-  
-  /* 
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
-  
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    
-    /* CSS */
-    
-  }
-  
-  
-  @media (min-width: 481px) and (max-width: 767px) {
-    
-    /* CSS */
-    
-  }
-  
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-  
-  @media (min-width: 320px) and (max-width: 480px) {
-    
-    /* CSS */
-    
-  }
+}
