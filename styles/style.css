@@ -46,7 +46,6 @@ nav{
 }
 
 .nav__options{
-    color: black;
     padding-left: 35px;
     padding-right: 35px;
 }
@@ -154,6 +153,12 @@ h1 + p{
      align-items: center;
 }
 
+.filters__li a:hover{
+    background-color: #0065FC;
+    border-color: #DEEBFF;
+    color: #DEEBFF;
+}
+
 .filters__li a i{
      display: flex;
      width: 50px;
@@ -234,11 +239,6 @@ h1 + p{
     background-color: white;
     border-radius: 20px;
     box-shadow:0 0 10px rgba(168, 162, 162, 0.75);
-}
-
-.search-results-cards:hover{
-    box-shadow: 5px 5px 5px #0065fc62;
-    cursor: pointer;
 }
 
 .search-results-cards img{
@@ -326,11 +326,6 @@ h1 + p{
     margin-bottom: 33px;
 }
 
-.popular-results-cards:hover{
-    box-shadow: 5px 5px 5px #0065fc62;
-    cursor: pointer;
-}
-
 .popular-results-cards img{
     min-width: 127px;
     width: 29%;
@@ -406,7 +401,7 @@ h1 + p{
     width: 100%;
 }
 
-.activities-cards-block{
+.activities-cards-block-1card, .activities-cards-block-2cards{
     margin: 25px 20px 20px 0;
     flex-grow: 1;
     flex-basis: 200px;
@@ -525,12 +520,12 @@ footer div a{
         flex-direction: column;
     }
 
-    .activities-cards-block div img{
-        height: 300px;
+    .activities-cards-block-2cards{
+        flex-grow: 2;
     }
 
-    .activities-cards{
-        height: 100%;
+    .activities-cards div img{
+        object-fit: cover;
     }
 
 }
@@ -548,8 +543,14 @@ footer div a{
     }
 
     .nav__options{
-        padding: 0;
         margin: auto;
+        display: block;
+        height: 100%;        
+    }  
+
+    .nav__options:hover{        
+        padding-top: 0;
+        border-top: none;        
     }
     
     #nav__logo{
@@ -563,6 +564,7 @@ footer div a{
         border-bottom: solid 3px #F2F2F2;
         text-align: center;
         line-height: 45px;
+        margin-top: 15px;
     }
 
     #nav__activities{
@@ -571,16 +573,11 @@ footer div a{
         border-bottom: solid 3px #F2F2F2;
         text-align: center;
         line-height: 45px;
+        margin-top: 15px;
     }
-
-    .nav__options:hover{
-        border-top: none;
-    }
-
+    
     #nav__activities:hover, #nav__hostings:hover{
         border-bottom: solid 3px #0065FC;
-        color: #0065FC;
-        font-weight: 600; 
     }
 
     #nav__signup{
@@ -588,6 +585,11 @@ footer div a{
         width: 50%;
         padding-right: 20px;
         text-align: right;
+        line-height: 45px;
+    }
+
+    #nav__signup:hover{
+        border-bottom: solid 3px #0065FC;
     }
 
     #search__btn{
@@ -596,5 +598,25 @@ footer div a{
         width: 50px;
         border-radius: 15px;
         margin-left: -15px;
+    }
+
+    main section, #popular-results, #results section{
+        padding: 0 20px;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0%;
+    }
+
+    #results section{
+        margin-top: 0;
+        background-color: white;
+    }
+
+    #search-results{
+        padding: 0;
+    }
+
+    .search-results-cards{
+        margin-right: 0;
     }
 }
