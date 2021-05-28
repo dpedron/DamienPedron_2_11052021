@@ -22,6 +22,16 @@ a{
     color: black;
 }
 
+h2{    
+    font-size: 1.375rem;
+    font-weight: 800;
+}
+
+h3{    
+    font-size: 1rem;
+    font-weight: 800;
+}
+
 img{
     object-fit: cover;
 }
@@ -30,7 +40,7 @@ img{
 
 header{
     max-width: 1440px;
-    margin: 50px;
+    margin: 37px 50px 50px 50px;
 }
 
 /* NAV */
@@ -61,7 +71,7 @@ nav{
 .nav__options:hover{
     color: #0065FC;
     border-top: 3px solid #0065FC;
-    padding-top: 63px; 
+    padding-top: 50px; 
     font-weight: 600;  
 }
 
@@ -225,8 +235,6 @@ h1 + p{
 
 #results section h2{
     margin: 45px 0 20px 0;
-    font-weight: 800;
-    font-size: 1.375rem;
 }
 
 #search-results{
@@ -246,7 +254,7 @@ h1 + p{
     margin: 0 30px 30px 0;
     padding: 5px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow:0 0 10px rgba(168, 162, 162, 0.75);
 }
 
@@ -258,8 +266,6 @@ h1 + p{
 
 .search-results-cards h3{
     margin: 10px 0 10px 15px;
-    font-size: 1rem;
-    font-weight: 800;
 }
 
 .search-results-cards p{    
@@ -315,8 +321,6 @@ h1 + p{
 
 #popular-results-title h2{
     margin: 0;
-    font-weight: 800;
-    font-size: 1.375rem;
 }
 
 #popular-results-list{
@@ -334,7 +338,7 @@ h1 + p{
     margin-bottom: 33px;
     padding: 5px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: 0 0 10px rgba(168, 162, 162, 0.75);
 }
 
@@ -353,8 +357,6 @@ h1 + p{
 
 .popular-results-cards h3{
     margin: 15px 0 0 0;
-    font-size: 1rem;
-    font-weight: 800;
 }
 
 .popular-results-cards p{
@@ -393,21 +395,17 @@ h1 + p{
 }
 
 #activities img{
+    vertical-align: bottom;
     width: 100%;
     border-radius: 25px 25px 0 0;
-    vertical-align: bottom;
 }
 
 #activities h2{
     margin: 0;
-    font-size: 1.3rem;
-    font-weight: 800;
 }
 
 #activities h3{
     padding: 20px;
-    font-size: 0.9rem;
-    font-weight: 800;
     margin: 0;
 }
 
@@ -418,68 +416,74 @@ h1 + p{
     width: 100%;
 }
 
-.activities-cards-block-1card, .activities-cards-block-2cards{
-    margin: 25px 20px 20px 0;
+.activities-cards-block1, .activities-cards-block2, .activities-cards-block3{
     flex-grow: 1;
     flex-basis: 200px;
+    margin: 25px 45px 20px 0;
+}
+
+.activities-cards-block4{
+    flex-grow: 1;
+    flex-basis: 200px;
+    margin: 25px 0 20px 0;
 }
 
 .activities-cards{
-    box-shadow: 0 0 10px rgba(168, 162, 162, 0.75);
-    border-radius: 25px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 10px rgba(168, 162, 162, 0.75);
+    border-radius: 25px;
 }
 
-.activities-cards-h445{
+.activities-cards-XL{
     height: 445px;
 }
 
-.activities-cards-h445 img{
+.activities-cards-XL img{
     height: 87.6%;
 }
 
-.activities-cards-h235{
+.activities-cards-L{
     height: 235px;
     margin-bottom: 45px;
 }
 
-.activities-cards-h235 img{
+.activities-cards-L img{
     height: 76.6%;
 }
 
-.activities-cards-h165{
+.activities-cards-XS{
     height: 165px;
 }
 
-.activities-cards-h165 img{
+.activities-cards-XS img{
     height: 66.7%;
 }
 
-.activities-cards-h195{
+.activities-cards-S{
     height: 195px;
     margin-bottom: 45px;
 }
 
-.activities-cards-h195 img{
+.activities-cards-S img{
     height: 71.8%;
 }
 
-.activities-cards-h205{
+.activities-cards-M{
     height: 205px;
 }
 
-.activities-cards-h205 img{
+.activities-cards-M img{
     height: 73.2%;
 }
 
 /* FOOTER */
 
 footer{
-    background-color: #F2F2F2;
+    display: flex;
     margin-top: 40px;
     padding: 50px 0 0 50px;
-    display: flex;
+    background-color: #F2F2F2;
 }
 
 footer div{
@@ -491,12 +495,13 @@ footer ul{
 }
 
 footer div a{
-    text-decoration: none;
-    color: black;
     line-height: 30px;
     font-size: 0.9rem;
 }
+
 /* MEDIA QUERIES */
+
+/* TABLET */
 
 @media (min-device-width : 76px) and (max-width: 1024px) {
 
@@ -510,9 +515,9 @@ footer div a{
     }
 
     .search-results-cards{
+        height: 300px;
         min-width: 80%;
         margin-right: 0;
-        height: 300px;
     }
 
     .search-results-cards img{
@@ -528,18 +533,18 @@ footer div a{
     }
 
     .popular-results-cards img{        
-       min-width: 70%;
+        min-width: 70%;
     }
 
     #activities-list{
         flex-direction: column;
     }
 
-    .activities-cards-block-1card{
+    .activities-cards-block1, .activities-cards-block3{
         margin-right: 0;
     }
 
-    .activities-cards-block-2cards{
+    .activities-cards-block2, .activities-cards-block4{
         flex-grow: 2;
         margin-right: 0;
     }
@@ -566,9 +571,10 @@ footer div a{
     }
 
     .nav__options{
-        margin: auto;
         display: block;
-        height: 100%;        
+        height: 100%;  
+        margin: auto;
+        padding: 0;      
     }  
 
     .nav__options:hover{        
@@ -584,19 +590,19 @@ footer div a{
     #nav__hostings{
         order: 3;
         width: 50%;
-        border-bottom: solid 3px #F2F2F2;
-        text-align: center;
         line-height: 45px;
         margin-top: 15px;
+        text-align: center;
+        border-bottom: solid 3px #F2F2F2;
     }
 
     #nav__activities{
         order: 4;
         width: 50%;
-        border-bottom: solid 3px #F2F2F2;
-        text-align: center;
         line-height: 45px;
         margin-top: 15px;
+        text-align: center;
+        border-bottom: solid 3px #F2F2F2;
     }
     
     #nav__activities:hover, #nav__hostings:hover{
@@ -606,17 +612,22 @@ footer div a{
     #nav__signup{
         order: 2;
         width: 33%;
+        line-height: 45px;
         padding-right: 20px;
         text-align: right;
-        line-height: 45px;
+    }
+
+    #nav__signup:hover{        
+        border-top: solid 3px #0065FC;
     }
     
     #search__btn{
+        width: 50px;
+        height: 50px;
         font-size: 0;
-        background: center/35% no-repeat url("../images/logo/search-solid.png"), #0065FC;
-        max-width: 50px;
-        border-radius: 15px;
         margin-left: -15px;
+        border-radius: 15px;
+        background: center/35% no-repeat url("../images/logo/search-solid.png"), #0065FC;
     }
 
     main section, #popular-results, #results section{
@@ -645,7 +656,7 @@ footer div a{
     }
 
     .popular-results-cards{
-        height: 134px;
+        height: 135px;
     }
 
     .popular-results-cards img{        
