@@ -352,7 +352,7 @@ h1 + p{
     display: flex;
     flex-direction: column;    
     justify-content: space-between;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .popular-results-cards h3{
@@ -503,7 +503,7 @@ footer div a{
 
 /* TABLET */
 
-@media screen and (max-device-width: 1024px) {
+@media (max-width: 1024px) {
 
     #results{
         flex-direction: column-reverse;
@@ -559,7 +559,7 @@ footer div a{
 }
 /* PHONE */
 
-@media screen and (max-device-width : 768px) {
+@media (max-width : 768px) {
 
     header{
         margin: 20px 0 0 0;
@@ -656,11 +656,11 @@ footer div a{
 
     .popular-results-cards{
         height: 135px;
-    }
+    }    
 
     .popular-results-cards img{        
         min-width: 39%;
-     }
+    }
     
     #activities{
         padding-top: 15px;
