@@ -503,7 +503,7 @@ footer div a{
 
 /* TABLET */
 
-@media screen and (min-device-width : 76px) and (max-width: 1024px) {
+@media screen and (min-device-width : 767px) and (max-width: 1024px) {
 
     #results{
         flex-direction: column-reverse;
